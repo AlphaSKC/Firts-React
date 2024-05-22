@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import logo from '../../img/imgHeader.png';
 
-function Header() {
+function Hero() {
     return (
         <Box
             sx={{
@@ -35,9 +35,10 @@ function Header() {
                 </Typography>
             </Box>
             <Box sx={{ flex: 0.5, display: 'flex', justifyContent:'center'}}>
-                <img src={logo} alt="Logo" style={{ maxWidth: '65%', objectFit: 'contain' }} />
+                
+                <img src={logo} alt="Logo" style={{ maxWidth: '85%', objectFit: 'contain',  borderRadius:'67% 33% 51% 49% / 58% 42% 58% 42% '}} />
             </Box>
         </Box>
     );
 }
-export default Header;
+export default Hero;
