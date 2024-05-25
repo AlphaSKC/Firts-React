@@ -11,7 +11,6 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import logo from '../../img/icon.png'
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -43,7 +42,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-            <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
+            <img src='./img/icon.png' alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
           </Box>
           <Typography
             variant="h6"
@@ -105,7 +104,7 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
+            <img src='./img/icon.png' alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
           </Box>
           <Typography
             variant="h5"

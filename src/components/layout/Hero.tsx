@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import logo from '../../img/imgHeader.png';
 
 function Hero() {
     return (
@@ -63,7 +62,7 @@ function Hero() {
                             </Box>
                         </Box>
                         
-                        <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
+                        <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:'30px',background:`url(${require('../../assets/Fondo.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', }}>
                             Título Principal
                         </Typography>
                     </Box>
@@ -73,7 +72,7 @@ function Hero() {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={8} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <img src={logo} alt="Logo" style={{minWidth:'300px',maxWidth: '65%', objectFit: 'contain', borderRadius: '67% 33% 51% 49% / 58% 42% 58% 42%' }} />
+                    <img src='./img/imgHeader.png' alt="Logo" style={{minWidth:'300px',maxWidth: '65%', objectFit: 'contain', borderRadius: '67% 33% 51% 49% / 58% 42% 58% 42%' }} />
                 </Grid>
             </Grid>
         </Box>
