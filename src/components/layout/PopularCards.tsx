@@ -34,14 +34,12 @@ export default function PopularCards() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            margin: '20px',
+            alignItems: 'flex-start',
             padding: '25px',
             marginLeft: 'auto',
             marginRight: 'auto',
-            textAlign: 'center'
         }}>
-            <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '30px', color: 'white' }}>
+            <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '30px', background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                 Más populares
             </Typography>
             <Divider sx={{ width: '100%', height: '2px', margin: '15px 0', background: `url(${require('../../assets/Fondo.jpg')})`, backgroundSize: 'cover' }} />

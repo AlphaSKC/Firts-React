@@ -69,7 +69,7 @@ export default function Hero() {
                     <Typography variant="subtitle1" sx={{ display: { xs: 'none', sm: 'block'}}}>
                     Sumérgete en el emocionante mundo de los videojuegos mientras exploras nuestra plataforma dedicada a la exposición de los últimos lanzamientos, clásicos atemporales y todo lo relacionado con la industria del gaming.
                     </Typography>
-                    <Typography variant="h6" sx={{ fontWeight:'bold',background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' ,display: { xs: 'none', sm: 'block'}}}>
+                    <Typography variant="h6" sx={{ fontWeight:'bold',color:'#B3AAFF',display: { xs: 'none', sm: 'block'}}}>
                     ¡Únete a nosotros y déjate llevar por la magia de Pixel Palace!
                     </Typography>
                 </Grid>
