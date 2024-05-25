@@ -3,14 +3,14 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-function Hero() {
+export default function Hero() {
     return (
         <Box
             sx={{
                 background: 'linear-gradient(to right, #13072E, #3F2182)',
                 color: 'white',
                 padding: '30px',
-                margin: '20px',
+                margin: '30px',
                 borderRadius: '20px',
                 width: '85%',
                 marginLeft: 'auto',
@@ -62,13 +62,15 @@ function Hero() {
                             </Box>
                         </Box>
                         
-                        <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:'30px',background:`url(${require('../../assets/Fondo.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', }}>
-                            Título Principal
+                        <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:'30px',background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
+                            ¡Bienvenidos a Pixel Palace!
                         </Typography>
                     </Box>
-                    <Typography variant="subtitle1" sx={{ wordWrap: 'break-word', display: { xs: 'none', sm: 'block'},}}>
-                        Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl. Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist.
-                        Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist aliquet elit ac nisl. Lorem ipsum praesent ac massa at ligula reet est iaculis. Vivamus est mist.
+                    <Typography variant="subtitle1" sx={{ display: { xs: 'none', sm: 'block'}}}>
+                    Sumérgete en el emocionante mundo de los videojuegos mientras exploras nuestra plataforma dedicada a la exposición de los últimos lanzamientos, clásicos atemporales y todo lo relacionado con la industria del gaming.
+                    </Typography>
+                    <Typography variant="h6" sx={{ fontWeight:'bold',background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' ,display: { xs: 'none', sm: 'block'}}}>
+                    ¡Únete a nosotros y déjate llevar por la magia de Pixel Palace!
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={8} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -78,5 +80,3 @@ function Hero() {
         </Box>
     );
 }
-
-export default Hero;
