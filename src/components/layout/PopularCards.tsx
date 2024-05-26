@@ -39,11 +39,11 @@ export default function PopularCards() {
             marginLeft: 'auto',
             marginRight: 'auto',
         }}>
-            <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '30px', background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
+            <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '30px', background: `url(${require('../../assets/FondoLetra.jpg')})`, backgroundSize: 'cover', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Más populares
             </Typography>
             <Divider sx={{ width: '100%', height: '2px', margin: '15px 0', background: `url(${require('../../assets/Fondo.jpg')})`, backgroundSize: 'cover' }} />
-            <Categories/>
+            <Categories />
             <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
                 {cardData.map((card, index) => (
                     <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
@@ -57,8 +57,8 @@ export default function PopularCards() {
                                     sx={{ width: '100%', objectFit: 'cover' }}
                                 />
                                 <Divider sx={{ width: '100%', height: '2px', background: `url(${require('../../assets/Fondo.jpg')})`, backgroundSize: 'cover' }} />
-                                <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center',maxHeight: '100px', overflow: 'hidden', }}>
-                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold', color: 'white'}}>
+                                <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', maxHeight: '100px', overflow: 'hidden', }}>
+                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold', color: 'white' }}>
                                         {card.title}
                                     </Typography>
                                     <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>

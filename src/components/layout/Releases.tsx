@@ -59,8 +59,8 @@ export default function Releases() {
             marginLeft: 'auto',
             marginRight: 'auto',
         }}>
-            <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '30px',background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
-                Próximos lanzamientos            
+            <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '30px', background: `url(${require('../../assets/FondoLetra.jpg')})`, backgroundSize: 'cover', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                Próximos lanzamientos
             </Typography>
             <Divider sx={{ width: '100%', height: '2px', margin: '15px 0', background: `url(${require('../../assets/Fondo.jpg')})`, backgroundSize: 'cover' }} />
             <Swiper
@@ -114,7 +114,7 @@ export default function Releases() {
                                 left: 0,
                                 right: 0,
                                 bottom: 0,
-                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                backgroundColor: 'rgba(0, 0, 0, 0.6)',
                                 borderRadius: '20px',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -126,7 +126,7 @@ export default function Releases() {
                             }}>
                                 {/* Por si está más chido con la imagen de fondo */}
                                 {/* , background: `url(${require('../../assets/FondoLetra.jpg')})`, backgroundSize: 'cover', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' */}
-                                <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:{xs:'30px',sm:'30px',md:'40px', lg:'50px'} }}>
+                                <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: { xs: '30px', sm: '30px', md: '40px', lg: '50px' } }}>
                                     {slide.title}
                                 </Typography>
                                 <Box sx={{
@@ -137,10 +137,10 @@ export default function Releases() {
                                     gap: '10px',
                                 }}>
                                     <CalendarMonthIcon sx={{
-                                        color: 'white',
+                                        color: '#B3AAFF',
                                         fontSize: '50px',
-                                    }}/>
-                                    <Typography variant="subtitle1" sx={{fontSize:'25px'}}>
+                                    }} />
+                                    <Typography variant="subtitle1" sx={{ fontSize: '25px', color: '#B3AAFF', fontWeight: 'bold' }}>
                                         {slide.date}
                                     </Typography>
                                 </Box>
@@ -151,8 +151,7 @@ export default function Releases() {
                                     padding: '10px 20px',
                                     fontWeight: 'bold',
                                     ":hover": {
-                                        color: 'white',
-                                    background: '#cc66ff',
+                                        background: '#B3AAFF',
                                     }
                                 }}>
                                     Reservar
