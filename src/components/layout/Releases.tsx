@@ -126,7 +126,7 @@ export default function Releases() {
                             }}>
                                 {/* Por si está más chido con la imagen de fondo */}
                                 {/* , background: `url(${require('../../assets/FondoLetra.jpg')})`, backgroundSize: 'cover', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' */}
-                                <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: '50px' }}>
+                                <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:{xs:'30px',sm:'30px',md:'40px', lg:'50px'} }}>
                                     {slide.title}
                                 </Typography>
                                 <Box sx={{
