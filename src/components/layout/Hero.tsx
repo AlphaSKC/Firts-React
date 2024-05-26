@@ -3,6 +3,18 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+const hastags = [
+    {
+        name: '#Gaming',
+    },
+    {
+        name: '#PixelPalace',
+    },
+    {
+        name: '#Awesome',
+    }
+]
+
 export default function Hero() {
     return (
         <Box
@@ -27,42 +39,32 @@ export default function Hero() {
                         marginBottom: '10px',
                     }}>
                         <Box sx={{
-                            display: 'flex',
+                            display: { xs: 'none', sm: 'flex' },
                             flexDirection: 'row',
                             alignItems: 'center',
                             justifyContent: 'center',
                             marginBottom: '10px',
                             gap: '10px',
                         }}>
-                            <Box
-                                sx={{
-                                    backgroundColor: '#B3AAFF',
-                                    padding: '5px 10px',
-                                    borderRadius: '20px',
-                                    width: 'fit-content',
-                                    marginBottom: '10px',
-                                }}
-                            >
-                                <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'black' }}>
-                                    #Gaming
-                                </Typography>
-                            </Box>
-                            <Box
-                                sx={{
-                                    backgroundColor: '#B3AAFF',
-                                    padding: '5px 10px',
-                                    borderRadius: '20px',
-                                    width: 'fit-content',
-                                    marginBottom: '10px',
-                                }}
-                            >
-                                <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'black' }}>
-                                    #Awesome
-                                </Typography>
-                            </Box>
+                            {hastags.map((hashtag, index) => (
+                                <Box
+                                    key={index}
+                                    sx={{
+                                        backgroundColor: '#B3AAFF',
+                                        padding: '5px 25px',
+                                        borderRadius: '20px',
+                                        width: 'fit-content',
+                                        marginBottom: '10px',
+                                    }}
+                                >
+                                    <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'black' }}>
+                                        {hashtag.name}
+                                    </Typography>
+                                </Box>
+                            ))}
                         </Box>
                         
-                        <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:'30px',background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
+                        <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize:'40px',background:`url(${require('../../assets/FondoLetra.jpg')})`,backgroundSize:'cover', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
                             ¡Bienvenidos a Pixel Palace!
                         </Typography>
                     </Box>

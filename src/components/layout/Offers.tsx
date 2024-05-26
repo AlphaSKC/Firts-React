@@ -68,7 +68,7 @@ export default function Offers() {
                             />
                             <Divider sx={{ width: '100%', height: '2px', background: `url(${require('../../assets/Fondo.jpg')})`, backgroundSize: 'cover' }} />
                             <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', maxHeight: '250px', overflow: 'hidden', alignItems: 'center' }}>
-                                <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold', color: 'white', fontSize: '25px' }}>
+                                <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold', color: '#B3AAFF', fontSize: '25px' }}>
                                     {card.title}
                                 </Typography>
                                 <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', flexDirection: 'row', gap: '10px', justifyContent: 'center' }}>

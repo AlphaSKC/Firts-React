@@ -14,37 +14,37 @@ const slides = [
         image: './img/Slides/PacMan.jpg',
         alt: 'PAC-MAN Mega Tunnel Battle: Chomp Champs ',
         title: "PAC-MAN Mega Tunnel Battle: Chomp Champs ",
-        date: '20-05-2024'
+        date: '12-05-2024'
     },
     {
         image: './img/Slides/Frostpunk2.jpg',
         alt: 'Frostpunk 2',
         title: "Frostpunk 2",
-        date: '20-05-2024'
+        date: '25-07-2024'
     },
     {
         image: './img/Slides/PaperMario.jpg',
         alt: 'Paper Mario: La Puerta Milenaria',
         title: "Paper Mario: La Puerta Milenaria ",
-        date: '20-05-2024'
+        date: '23-05-2024'
     },
     {
         image: './img/Slides/VRising.jpg',
         alt: 'V Rising',
         title: "V Rising",
-        date: '20-05-2024'
+        date: '22-05-2024'
     },
     {
         image: './img/Slides/PrincessPeach.jpg',
         alt: 'Princess Peach Showtime',
         title: "Princess Peach Showtime",
-        date: '20-05-2024'
+        date: '08-11-2024'
     },
     {
         image: './img/Slides/StarWars.jpg',
         alt: 'Star Wars Outlaws',
         title: "Star Wars Outlaws",
-        date: '20-05-2024'
+        date: '29-08-2024'
     },
 
 ];
@@ -124,9 +124,15 @@ export default function Releases() {
                                 padding: '20px',
                                 gap: '10px',
                             }}>
-                                {/* Por si está más chido con la imagen de fondo */}
-                                {/* , background: `url(${require('../../assets/FondoLetra.jpg')})`, backgroundSize: 'cover', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' */}
-                                <Typography variant="h4" sx={{ fontWeight: 'bold', fontSize: { xs: '30px', sm: '30px', md: '40px', lg: '50px' } }}>
+                                <Typography variant="h4" sx={{
+                                    fontWeight: 'bold',
+                                    fontSize: { xs: '30px', sm: '30px', md: '40px', lg: '50px' },
+                                    background: { md: `url(${require('../../assets/FondoLetra.jpg')})`, xs: 'none' },
+                                    backgroundSize: { md: 'cover', xs: 'none' },
+                                    WebkitBackgroundClip: { md: 'text', xs: 'none' },
+                                    WebkitTextFillColor: { md: 'transparent', xs: 'white' },
+
+                                }}>
                                     {slide.title}
                                 </Typography>
                                 <Box sx={{
@@ -140,7 +146,7 @@ export default function Releases() {
                                         color: '#B3AAFF',
                                         fontSize: '50px',
                                     }} />
-                                    <Typography variant="subtitle1" sx={{ fontSize: '25px', color: '#B3AAFF', fontWeight: 'bold' }}>
+                                    <Typography variant="subtitle1" sx={{ fontSize: '25px', color: 'white', fontWeight: 'bold' }}>
                                         {slide.date}
                                     </Typography>
                                 </Box>
@@ -148,8 +154,9 @@ export default function Releases() {
                                     color: 'black',
                                     background: 'white',
                                     borderRadius: '20px',
-                                    padding: '10px 20px',
+                                    padding: '15px 30px',
                                     fontWeight: 'bold',
+                                    fontSize: '15px',
                                     ":hover": {
                                         background: '#B3AAFF',
                                     }
