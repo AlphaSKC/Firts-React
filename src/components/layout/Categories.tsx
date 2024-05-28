@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Button, IconButton } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -52,6 +52,17 @@ const categories = [
 ];
 
 export default function Categories() {
+    const [startIndex, setStartIndex] = React.useState(0);
+    const visibleCount = 4; // Número de botones visibles
+
+    const handlePrev = () => {
+        setStartIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    };
+
+    const handleNext = () => {
+        setStartIndex((prevIndex) => Math.min(prevIndex + 1, categories.length - visibleCount));
+    };
+
     return (
         <Box sx={{
             display: 'flex',
@@ -62,8 +73,14 @@ export default function Categories() {
             marginBottom: '10px',
             gap: '10px',
         }}>
-            <ArrowBackIosNewIcon sx={{ color: '#a6a6a6', display: { xs: 'none', lg: 'block' } }} />
-            {categories.map((category, index) => (
+            <IconButton
+                onClick={handlePrev}
+                disabled={startIndex === 0}
+                sx={{ color: 'white' }}
+            >
+                <ArrowBackIosNewIcon />
+            </IconButton>
+            {categories.slice(startIndex, startIndex + visibleCount).map((category, index) => (
                 <Button
                     key={index}
                     sx={{
@@ -71,8 +88,6 @@ export default function Categories() {
                         border: '2px solid #f2f2f2',
                         borderRadius: '20px',
                         padding: '5px 30px',
-                        marginBottom: '10px',
-                        display: { xs: 'none', lg: 'block' },
                         color: category.color,
                         fontWeight: 'bold',
                         '&:hover': {
@@ -83,7 +98,13 @@ export default function Categories() {
                     {category.name}
                 </Button>
             ))}
-            <ArrowForwardIosIcon sx={{ color: 'white', display: { xs: 'none', lg: 'block' } }} />
+            <IconButton
+                onClick={handleNext}
+                disabled={startIndex === categories.length - visibleCount}
+                sx={{ color: 'white' }}
+            >
+                <ArrowForwardIosIcon />
+            </IconButton>
         </Box>
     );
 }

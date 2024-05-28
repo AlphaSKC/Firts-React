@@ -7,6 +7,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import '../../assets/styleSwiper.css'
+
 import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 
 const slides = [
@@ -35,10 +37,10 @@ const slides = [
         date: '22-05-2024'
     },
     {
-        image: './img/Slides/PrincessPeach.jpg',
-        alt: 'Princess Peach Showtime',
-        title: "Princess Peach Showtime",
-        date: '08-11-2024'
+        image: './img/Slides/Multiversus.jpg',
+        alt: 'Multiversus',
+        title: "Multiversus",
+        date: '28-05-2024'
     },
     {
         image: './img/Slides/StarWars.jpg',
@@ -46,7 +48,12 @@ const slides = [
         title: "Star Wars Outlaws",
         date: '29-08-2024'
     },
-
+    {
+        image: './img/Slides/PrincessPeach.jpg',
+        alt: 'Princess Peach Showtime',
+        title: "Princess Peach Showtime",
+        date: '08-11-2024'
+    },
 ];
 
 export default function Releases() {
@@ -84,7 +91,6 @@ export default function Releases() {
                 }}
                 autoplay={{
                     delay: 2500,
-                    disableOnInteraction: true,
                 }}
                 modules={[Pagination, EffectCoverflow, Autoplay]}
                 className='mySwiper'
@@ -103,6 +109,7 @@ export default function Releases() {
                             backgroundPosition: 'center',
                             borderRadius: '20px',
                             height: '400px',
+                            width: '100%',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
